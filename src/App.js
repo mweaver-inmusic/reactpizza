@@ -1,13 +1,15 @@
 import './App.css';
-import Demo from './pages/demo.page';
-import Pizza from './pages/pizza.page';
+import Environment from './components/environment.component';
+import ListPizza from './components/ListPizza.component';
+import AddPizza from './components/AddPizza.component';
 
 function App() {
   return (
-    <>
-      <Pizza />
-      {/* <Demo /> */}
-    </>
+    <div>
+      <Environment />
+      <AddPizza />
+      <ListPizza />
+    </div>
   );
 }
 
