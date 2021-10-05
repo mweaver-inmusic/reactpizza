@@ -5,6 +5,7 @@ import Stack from '@mui/material/Stack';
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
 import '@fontsource/roboto/400.css';
+import { Link } from 'react-router-dom';
 
 const Login = () => {
     return (
@@ -14,7 +15,7 @@ const Login = () => {
                 <TextField label="Email" />
                 <TextField label="Password" />
                 <Button variant="contained">Login</Button>
-                <Button>Don't have an account? Register here</Button>
+                <Button component={Link} to="/register">Don't have an account? Register here</Button>
             </Stack>
         </Container>
     );
