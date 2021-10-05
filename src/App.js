@@ -1,14 +1,11 @@
 import './App.css';
-import Environment from './components/environment.component';
-import ListPizza from './components/ListPizza.component';
-import AddPizza from './components/AddPizza.component';
+import Login from './pages/login.page';
+import Register from './pages/register.page';
 
 function App() {
   return (
     <div>
-      <Environment />
-      <AddPizza />
-      <ListPizza />
+      <Register />
     </div>
   );
 }
