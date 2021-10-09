@@ -1,12 +1,18 @@
+import { useState } from 'react';
+import { useEffect } from 'react';
 import logo from '../logo.svg';
 const Home = () => {
-    return (
-        <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-        </header>
-      </div>
-    );
+  const [users, setUsers] = useState([]);
+  
+  useEffect(() => {
+    fetch('http://localhost:5000/account/users').then(res => res.json()).then(data => setUsers(data));
+  }, [])
+
+  return (
+    <>
+    {users.map(user => <p>{user.email}</p>)}
+    </>
+  );
 }
 
 export default Home;
